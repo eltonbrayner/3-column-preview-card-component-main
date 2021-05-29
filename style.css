@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --firstCard: hsl(31, 77%, 52%);
+  --secondCard: hsl(184, 100%, 22%);
+  --thirdCard: hsl(179, 100%, 13%);
+
+  --mainWhite: hsl(0, 0%, 95%);
+  --paragraph: hsla(0, 0%, 100%, 0.75);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--mainWhite);
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 45rem;
+}
+
+.card:first-child {
+  background: var(--firstCard);
+  border-radius: 0.75rem 0 0 0.75rem;
+}
+
+.card:nth-child(2) {
+  background: var(--secondCard);
+}
+
+.card:last-child {
+  background: var(--thirdCard);
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+
+.card {
+  height: 25rem;
+
+  padding: 2.5rem;
+}
+
+.cardHead {
+  margin: 2rem 0;
+
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--mainWhite);
+}
+
+.cardBody {
+  color: var(--paragraph);
+  font-family: 'Lexend Deca', sans-serif;
+
+  line-height: 1rem;
+  font-size: 0.78rem;
+  height: 8rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  border: none;
+
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.card:first-child button {
+  color: var(--firstCard);
+}
+
+.card:nth-child(2) button {
+  color: var(--secondCard);
+}
+
+.card:last-child button {
+  color: var(--thirdCard);
+}
+
+a:visited {
+  color: blue;
+  text-decoration: none;
+}
+
+.animeSvg {
+  transform: translateX(-20px);
+  animation: anime 1s forwards;
+}
+
+.animeCards {
+  transform: translateY(-10px);
+  animation: anime 1s forwards;
+}
+
+@keyframes anime {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+@media (max-width: 46rem) {
+  body {
+    height: auto;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 1rem 6rem;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  .card:first-child {
+    border-radius: 0.75rem 0.75rem 0 0;
+  }
+
+  .card:last-child {
+    border-radius: 0 0 0.75rem 0.75rem;
+  }
+}
+
+@media (max-width: 32rem) {
+  .card {
+    width: 70%;
+  }
+}
+
+@media (max-width: 25rem) {
+  .card {
+    width: 50%;
+  }
+}
