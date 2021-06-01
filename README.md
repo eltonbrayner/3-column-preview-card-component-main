@@ -13,12 +13,8 @@
 - [LinkedIn](https://www.linkedin.com/in/eltonbrayner/)
 # 3-column-preview-card-component-main
 
+- [Preview](https://eltonbrayner.github.io/frontend-challenge-02/)
 
-## Features
 
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
 
   
